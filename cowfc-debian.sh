@@ -488,3 +488,4 @@ EOF
         reboot
         exit 0
     # DO NOT PUT COMMANDS UNDER THIS FI
+    fi
