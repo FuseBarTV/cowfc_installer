@@ -301,14 +301,14 @@ function config_mysql() {
     echo "We will now configure MYSQL server."
     debconf-set-selections <<<'mysql-server mysql-server/root_password password passwordhere'
     debconf-set-selections <<<'mysql-server mysql-server/root_password_again password passwordhere'
-    apt-get -y install mariadb-server
+    apt-get -y install mysql-server
     # We will now set the new mysql password in the AdminPage.php file.
     # Do not change "passwordhere", as this will be the base for replacing it later
     # The below sed command has NOT been tested so we don't know if this will work or not.
     #sed -i -e 's/passwordhere/passwordhere/g' /var/www/html/_site/AdminPage.php
     # Next we will install two more packages to make mysql and sqlite work with PHP
-    apt-get install --force-yes php7.4-mysql -y
-    apt-get install --force-yes sqlite php7.4-sqlite3 -y
+    apt-get install --force-yes php7.1-mysql -y
+    apt-get install --force-yes sqlite php7.1-sqlite3 -y
     # Now we will set up our first admin user
     echo "Now we're going to set up our first Admin Portal user."
     read -rp "Please enter the username you wish to use: " firstuser
@@ -510,8 +510,3 @@ EOF
         exit 0
     # DO NOT PUT COMMANDS UNDER THIS FI
     fi
-else
-    echo "Sorry, you do not appear to be running a supported Opperating System."
-    echo "Please make sure you are running Ubuntu 14.04, Ubuntu 16.04 and Ubuntu 20.04, and try again!"
-    exit 1
-fi
