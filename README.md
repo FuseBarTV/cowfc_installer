@@ -31,7 +31,7 @@ Remplace cowfc.sh with cowfc_for_aws_ubuntu_16.sh if you are using AWS.
 ![image](https://www.debian.org/logos/openlogo-nd-25.png) Debian
 ----
 
-`wget https://raw.githubusercontent.com/EnergyCube/cowfc_installer/master/cowfc-debian.sh && chmod +x cowfc-debian.sh && ./cowfc-debian.sh`
+`wget https://raw.githubusercontent.com/FuseBartV/cowfc_installer/master/cowfc-debian.sh && chmod +x cowfc-debian.sh && ./cowfc-debian.sh`
 
 📖 Notes
 -------
