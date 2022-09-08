@@ -48,6 +48,8 @@ Ubuntu script use PHP 7.1 & MySQL\
 Debian script use PHP 7.4 & MariaDB\
 AWS Ubuntu 16.04 script use PHP 7.0 & MySQL
 
+I am currently in the works of converting scripts to work with todays software
+
 ❤️ Credits
 -------
 kyle95wm
